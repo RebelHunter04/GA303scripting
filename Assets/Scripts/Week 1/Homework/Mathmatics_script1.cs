@@ -20,7 +20,7 @@ public class Mathmatics_script1 : MonoBehaviour
         Debug.Log(crazyHorse); 
         Debug.Log(blackCrow);
         Debug.Log(redSheep);
-        Debug.Log(total)
+        Debug.Log(total);
     }
 
     // Update is called once per frame
