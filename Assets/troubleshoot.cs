@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Float_script2 : MonoBehaviour
+public class troubleshoot : MonoBehaviour
 {
     float total;
     public float gunSmoke;
@@ -9,11 +9,10 @@ public class Float_script2 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        total = gunSmoke + boneHawk - (gunSmoke * outHouse) / boneHawk + outHouse;  
-
         Debug.Log(gunSmoke);
         Debug.Log(boneHawk);
         Debug.Log(outHouse);
+        total = gunSmoke + boneHawk - (gunSmoke * outHouse) / boneHawk + outHouse;       
     }
 
     // Update is called once per frame
