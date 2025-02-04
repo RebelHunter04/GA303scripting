@@ -1,5 +1,4 @@
 using System.Xml.Schema;
-using Unity.Android.Types;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
