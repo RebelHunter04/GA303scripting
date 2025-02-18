@@ -5,13 +5,10 @@ public class Shooting : MonoBehaviour
     public GameObject BulletPrefab;
     public Transform FirePlace;
     public float BulletForce;
-    
-    private void Update()
+
+    public void FireOnTimer()
     {
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            fire();
-        }
+        Invoke("fire", 0.5f);
     }
     void fire()
     {

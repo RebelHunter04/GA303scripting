@@ -1,8 +1,9 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class OnTrigger : MonoBehaviour
 {
     public Explode explode; 
+    public Shooting shooting;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +20,7 @@ public class OnTrigger : MonoBehaviour
         if (other.gameObject.tag == "Cyl")
         {
            explode.explode();
+            shooting.FireOnTimer(); 
            Debug.Log(other.name + "has entered");
         }
        
@@ -26,6 +28,7 @@ public class OnTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+
         Debug.Log(other.name + "Has exited");
     }
 }
