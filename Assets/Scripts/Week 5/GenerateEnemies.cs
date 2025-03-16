@@ -7,28 +7,29 @@ public class GenerateEnemies : MonoBehaviour
     public int xPos;
     public int zPos;
     public int enemyCount;
+    public int Spawn; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        Spawn = 1;
+    }
+
+    void Update()
+    {
+        if (Spawn == 1)
         {
-           // foreach(Booghost ghost in booGhost)
+            enemyCount = Random.Range(20, 40);
+            for (int i = 1; i <= enemyCount; i++)
             {
                 xPos = Random.Range(875, 895);
                 zPos = Random.Range(1920, 1939);
-                Instantiate(booGhostPrefab, new Vector3(xPos, 43, zPos), Quaternion.identity);
+                Instantiate(booGhostPrefab, new Vector3(xPos, 47, zPos), Quaternion.identity);
             }
+            Spawn = 0;
         }
-        //Find how many enemies you're going to spawn with Random.Range
+       
 
-        //Make that number part of the conditional part of the for loop so it spawns that many
 
-        //PUT THE FOLLOWING IN A FOR LOOP
-        /*
-        xPos = Random.Range(875, 895);
-        zPos = Random.Range(1920, 1939);
-        Instantiate(booGhostPrefab, new Vector3(xPos, 43, zPos), Quaternion.identity);
-        */
     }
 
     IEnumerator EnemyDrop()
