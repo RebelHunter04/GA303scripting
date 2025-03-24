@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GenerateEnemies : MonoBehaviour
@@ -7,7 +8,9 @@ public class GenerateEnemies : MonoBehaviour
     public int xPos;
     public int zPos;
     public int enemyCount;
-    public int Spawn; 
+    public int Spawn;
+    public List<BooMove> booGhost = new List<BooMove>();
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +26,8 @@ public class GenerateEnemies : MonoBehaviour
             {
                 xPos = Random.Range(875, 895);
                 zPos = Random.Range(1920, 1939);
-                Instantiate(booGhostPrefab, new Vector3(xPos, 47, zPos), Quaternion.identity);
+                booGhost.Add(Instantiate(booGhostPrefab, new Vector3(xPos, 47, zPos), Quaternion.identity).GetComponent<BooMove>());
+
             }
             Spawn = 0;
         }
@@ -32,7 +36,8 @@ public class GenerateEnemies : MonoBehaviour
 
     }
 
-    IEnumerator EnemyDrop()
+
+  /*  IEnumerator EnemyDrop()
     {
         while (enemyCount < 30)
         {
@@ -42,5 +47,5 @@ public class GenerateEnemies : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             enemyCount += 1; 
         }
-    }
+    }*/
 }

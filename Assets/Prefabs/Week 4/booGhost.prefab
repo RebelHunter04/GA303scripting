@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1674784875865014189}
   - component: {fileID: 4327142292129420729}
   - component: {fileID: 4813812824318318699}
-  - component: {fileID: 3156500860118531075}
+  - component: {fileID: -2248460191392529853}
   m_Layer: 0
   m_Name: booGhost
   m_TagString: Untagged
@@ -135,9 +135,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3156500860118531075
+--- !u!114 &-2248460191392529853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,3 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9362d5a91f0e85b4fa5759621819861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rbody: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
+  speed: 400
+  timer: 4

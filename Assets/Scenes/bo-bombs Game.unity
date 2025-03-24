@@ -1007,6 +1007,7 @@ MonoBehaviour:
   zPos: 0
   enemyCount: 0
   Spawn: 0
+  booGhost: []
 --- !u!1 &1140252565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1148,9 @@ MonoBehaviour:
   timer: 30
   timerText: {fileID: 1440705721}
   hasTimerFinished: 0
-  counterScript: {fileID: 0}
+  counterScript: {fileID: 1195700552}
+  EnemiesSpawned: {fileID: 1101138272}
+  PlayerNumber: {fileID: 892686032}
 --- !u!4 &1195700553
 Transform:
   m_ObjectHideFlags: 0

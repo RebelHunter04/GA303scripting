@@ -8,6 +8,8 @@ public class UICounter : MonoBehaviour
     public bool hasTimerFinished = false;
     private bool allowCounting;
     public UICounter counterScript;
+    public GenerateEnemies EnemiesSpawned;
+    public numbGuesser PlayerNumber;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,5 +35,16 @@ public class UICounter : MonoBehaviour
             timerText.text = Mathf.Ceil(timer).ToString("F0");
         }
         
+       if(hasTimerFinished == true)
+        {
+            if(PlayerNumber.counter == EnemiesSpawned.enemyCount)
+             {
+                timerText.text = ("You Win");
+             }
+             else
+             {
+                timerText.text = ("Better Luck Next Time");
+            }
+        }
     }
 }

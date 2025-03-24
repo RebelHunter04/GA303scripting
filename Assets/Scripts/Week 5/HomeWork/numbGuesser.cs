@@ -26,6 +26,7 @@ public class numbGuesser : MonoBehaviour
         {
             counter = 0; 
         }
+        numbtext.text = counter.ToString(); 
     }
     void CountUp()
     {
