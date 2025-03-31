@@ -22,7 +22,7 @@ public class BooHide : MonoBehaviour
      //   hidethis.booghost.hide
        //every 5 to 10(rand) secs hide ghost for 1 sec  
        
-     //if (tDelay += tRand)
+    
         {
             booGhost.SetActive(false);
         }

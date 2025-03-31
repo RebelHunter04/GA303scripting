@@ -17,7 +17,7 @@ public class BooList : MonoBehaviour
         }
         for (int i = 0; i < booGhost.Count; i++)
         {
-           // if() 
+           // if(3) 
         }
 
         // Update is called once per frame
